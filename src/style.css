@@ -1,0 +1,51 @@
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	--primary-dark-blue: #202c3c;
+	--deep-navy: #0b111d;
+	--slate-blue: #202b3d;
+
+	--primary-rgb: 32, 43, 61;
+
+	--slate-100: rgb(241 245 249);
+	--slate-200: rgb(226 232 240);
+	--slate-300: rgb(203 213 225);
+	--slate-400: rgb(148 163 184);
+	--slate-500: rgb(100 116 139);
+	--slate-600: rgb(71 85 105);
+	--slate-700: rgb(51 65 85);
+	--slate-800: rgb(30 41 59);
+	--slate-900: rgb(15 23 42);
+	--slate-950: rgb(2 6 23);
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--deep-navy);
+	height: auto;
+}
+
+@media only screen and (min-width: 700px) {
+	body {
+		background-color: var(--slate-blue);
+		padding: 2rem;
+	}
+}
+
+img {
+	z-index: 1;
+}
