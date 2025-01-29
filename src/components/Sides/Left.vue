@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import SearchInput from '@components/Location/SearchInput.vue';
 import MainInfo from '@components/home/MainInfo.vue';
 import HourlyWeather from '@components/Weather/HourlyWeather.vue';
 import BottomInfo from '../home/BottomInfo.vue';
