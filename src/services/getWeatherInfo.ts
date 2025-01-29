@@ -1,5 +1,5 @@
 import type { TLocation } from '@/types/location';
-import type { TDailyRes, THourly, THourlyRes } from '@/types/weather';
+import type { TDailyRes, THourlyRes } from '@/types/weather';
 const WEATHER_URL = import.meta.env.VITE_OPEN_METEO_URL;
 export const getHourlyWeather = async (location: TLocation): Promise<THourlyRes> => {
 	try {
@@ -9,7 +9,7 @@ export const getHourlyWeather = async (location: TLocation): Promise<THourlyRes>
 		if (!response.ok) {
 			throw new Error('Weather data not found');
 		}
-		const data = await response.json();
+		const data = (await response.json()) as THourlyRes;
 		return data;
 	} catch (error: any) {
 		throw new Error(error.message || 'Failed to fetch weather data');
@@ -25,7 +25,7 @@ export const getDailyWeather = async (location: TLocation): Promise<TDailyRes> =
 		if (!response.ok) {
 			throw new Error('Weather data not found');
 		}
-		const data = await response.json();
+		const data = (await response.json()) as TDailyRes;
 		return data;
 	} catch (error: any) {
 		throw new Error(error.message || 'Failed to fetch weather data');

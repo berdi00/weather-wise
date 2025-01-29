@@ -10,7 +10,7 @@ export const fetchLocations = async (query: string): Promise<TLocationsRes> => {
 			throw new Error('Location not found');
 		}
 
-		const data: TLocationsRes = await response.json();
+		const data: TLocationsRes = (await response.json()) as TLocationsRes;
 		if (!data.results || data.results.length === 0) {
 			throw new Error('Location not found');
 		}
