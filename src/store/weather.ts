@@ -23,6 +23,7 @@ watch(
 					getDailyWeather(location.value),
 				]);
 				formattedDaily.value = formatData(resDaily.daily, resHourly.hourly, currentHour.value);
+				errorWeather.value = '';
 			}
 		} catch (err: any) {
 			errorWeather.value = err.message;
@@ -35,4 +36,4 @@ watch(
 	}
 );
 
-export { currentIndex, formattedDaily, loadingWeather };
+export { currentIndex, formattedDaily, loadingWeather, errorWeather };

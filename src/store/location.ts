@@ -11,6 +11,7 @@ const location = ref<TLocation>({
 	id: 1,
 	name: 'Ashgabat',
 });
+
 const errorSearch = ref('');
 const loadingSearch = ref(false);
 
@@ -21,6 +22,7 @@ watch(
 		try {
 			const data = await fetchLocations(searchValue.value);
 			locations.value = data.results;
+			errorSearch.value = '';
 		} catch (err: any) {
 			errorSearch.value = err.message;
 		} finally {

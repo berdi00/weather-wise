@@ -7,7 +7,6 @@ import BottomInfo from '../home/BottomInfo.vue';
 
 <template>
 	<div class="left-container">
-		<SearchInput class="search-desktop" />
 		<MainInfo />
 		<HourlyWeather />
 		<BottomInfo />
@@ -20,18 +19,13 @@ import BottomInfo from '../home/BottomInfo.vue';
 	flex-direction: column;
 	gap: 1rem;
 }
-.search-desktop {
-	display: none;
-}
+
 @media only screen and (min-width: 700px) {
 	.left-container {
 		width: 70%;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
-	}
-	.search-desktop {
-		display: block;
 	}
 }
 </style>

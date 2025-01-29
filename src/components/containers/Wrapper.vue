@@ -1,12 +1,17 @@
 <script setup lang="ts">
-import { loadingWeather } from '@/store/weather';
+import { errorWeather, loadingWeather } from '@/store/weather';
 import Loading from '@components/home/Loading.vue';
+import ErrorResponse from '../home/ErrorResponse.vue';
+import { errorSearch } from '@/store/location';
+import SearchInput from '../Location/SearchInput.vue';
 </script>
 
 <template>
 	<div class="wrapper">
+		<SearchInput class="search-desktop" />
 		<Loading v-if="loadingWeather" />
-		<slot />
+		<ErrorResponse v-else-if="errorSearch || errorWeather" />
+		<slot v-else />
 	</div>
 </template>
 
@@ -21,11 +26,20 @@ import Loading from '@components/home/Loading.vue';
 	padding-inline: 5px;
 }
 
+.search-desktop {
+	display: none;
+}
+
 @media only screen and (min-width: 700px) {
 	.wrapper {
 		margin-block: 1rem;
 		padding-block: 1rem;
 		padding-inline: 0.8rem;
+	}
+
+	.search-desktop {
+		display: block;
+		width: 70%;
 	}
 }
 </style>
