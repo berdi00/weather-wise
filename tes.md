@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Weather Wise is a user-friendly application designed to provide accurate and detailed weather forecasts. With features such as location selection, hourly forecasts, and additional weather metrics, users can easily stay informed about current and upcoming weather conditions.
+The Weather App is a user-friendly application designed to provide accurate and detailed weather forecasts. With features such as location selection, hourly forecasts, and additional weather metrics, users can easily stay informed about current and upcoming weather conditions.
 
 ---
 
@@ -34,6 +34,22 @@ Stay informed with comprehensive weather metrics:
 
 ---
 
+## Environment Variables
+
+To run the project locally, create a `.env` file in the root directory and add the following environment variables:
+
+```env
+REACT_APP_WEATHER_API_KEY=your_api_key_here
+REACT_APP_API_URL=https://api.example.com
+```
+
+- Replace `your_api_key_here` with your weather API key.
+- Update the `API_URL` as per your service provider.
+
+Ensure you do not commit this file to version control.
+
+---
+
 ## Usage Instructions
 
 1. **Select Location:** Use the location selection feature to choose the desired place for weather updates.
@@ -46,19 +62,8 @@ Stay informed with comprehensive weather metrics:
 
 ## Technologies Used
 
-- Vue.js, (Composition Api)
+- [Your Tech Stack Here] (e.g., Vue.js, React, Tailwind CSS, etc.)
 - [API Provider Name for Weather Data]
-
----
-
-## Environment Variables
-
-To run the project locally, create a `.env.local` file in the root directory and add the following environment variables:
-
-```env.local
-VITE_GEOCODING_URL=https://geocoding-api.open-meteo.com/v1
-VITE_OPEN_METEO_URL=https://api.open-meteo.com/v1
-```
 
 ---
 
@@ -66,15 +71,30 @@ VITE_OPEN_METEO_URL=https://api.open-meteo.com/v1
 
 ```bash
 # Clone the repository
-git clone https://github.com/berdi00/weather-wise
+git clone [repository-url]
 
 # Navigate to the project directory
-cd weather-wise
+cd [project-directory]
 
 # Install dependencies
-pnpm install
+npm install
 
-# Run the dev server
-pnpm dev
-
+# Run the application
+npm start
 ```
+
+---
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the project.
+2. Create a new feature branch.
+3. Submit a pull request.
+
+---
+
+## License
+
+This project is licensed under the [License Name].

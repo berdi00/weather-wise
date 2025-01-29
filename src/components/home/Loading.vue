@@ -1,6 +1,6 @@
 <template>
 	<div class="loading-container">
-		<div class="loading-spinner">Loading</div>
+		<div class="loading-spinner">Loading...</div>
 	</div>
 </template>
 
