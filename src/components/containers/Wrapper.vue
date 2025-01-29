@@ -8,7 +8,7 @@ import SearchInput from '../Location/SearchInput.vue';
 
 <template>
 	<div class="wrapper">
-		<SearchInput class="search-desktop" />
+		<SearchInput class="search" />
 		<Loading v-if="loadingWeather" />
 		<ErrorResponse v-else-if="errorSearch || errorWeather" />
 		<slot v-else />
@@ -26,8 +26,12 @@ import SearchInput from '../Location/SearchInput.vue';
 	padding-inline: 5px;
 }
 
-.search-desktop {
-	display: none;
+.search {
+	position: sticky;
+	top: 5px;
+	left: 0;
+	padding-inline: 3px;
+	padding-block: 3px;
 }
 
 @media only screen and (min-width: 700px) {
@@ -37,7 +41,7 @@ import SearchInput from '../Location/SearchInput.vue';
 		padding-inline: 0.8rem;
 	}
 
-	.search-desktop {
+	.search {
 		display: block;
 		width: 70%;
 	}
