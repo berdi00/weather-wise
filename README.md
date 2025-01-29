@@ -47,7 +47,7 @@ Stay informed with comprehensive weather metrics:
 ## Technologies Used
 
 - Vue.js, (Composition Api)
-- [API Provider Name for Weather Data]
+- Open-Meteo - is an open-source weather API, for more info check out [Open Meteo](https://open-meteo.com/)
 
 ---
 
