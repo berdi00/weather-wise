@@ -2,7 +2,7 @@
 import { errorWeather, loadingWeather } from '@/store/weather';
 import Loading from '@components/home/Loading.vue';
 import ErrorResponse from '../home/ErrorResponse.vue';
-import { errorSearch } from '@/store/location';
+import { errorSearch, locations } from '@/store/location';
 import SearchInput from '../Location/SearchInput.vue';
 </script>
 
@@ -10,7 +10,7 @@ import SearchInput from '../Location/SearchInput.vue';
 	<div class="wrapper">
 		<SearchInput class="search" />
 		<Loading v-if="loadingWeather" />
-		<ErrorResponse v-else-if="errorSearch || errorWeather" />
+		<ErrorResponse v-else-if="locations?.length ? false : errorSearch || errorWeather" />
 		<slot v-else />
 	</div>
 </template>
